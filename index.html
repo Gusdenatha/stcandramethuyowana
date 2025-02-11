@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STCMY</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- BaguetteBox CSS (Untuk Lightbox Galeri) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+   
+     <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="backsound" autoplay loop>
+        <source src="aset/Asak Dehe.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+    </audio>    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">STCMY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <button id="toggleAudio" class="btn btn-outline-primary">🔊 Play/Pause</button>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="text-center d-flex align-items-center">
+        <div class="container">
+            <h1 class="animate-title" data-aos="fade-up">Banjar Adat Mekar  Sari</h1>
+            <p class="animate-subtitle" data-aos="fade-up" data-aos-delay="300">
+                Seka Teruna Teruni Candra Methu Yowana
+            </p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>About Us</h2>
+                    <p>Banjar Adat Mekar Sari terletak di Jalan Ahmad Yani Utara No. 83, Desa Adat Denpasar, Denpasar Utara, Kota Denpasar. Banjar Mekar Sari berbatasan di sebelah selatan dengan Banjar Lumintang dan di sebelah utara dengan Banjar Hita Bhuana.</p>
+                    <a href="https://www.google.com/maps/@-8.6372198,115.2106003,3a,74.999992y,274.891785h,89.999924t/data=!3m4!1e1!3m2!1sxT6K0K17k3PdgGE2UR82Ng!2e0?g_ep=CAISBjYuNDkuNBgAIIGBAUICSUQ%3D&g_st=ic_blank" class="btn btn-primary">Lihat Lokasi</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="aset/lok.png" class="img-fluid rounded shadow" alt="Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Gallery -->
+<section id="gallery" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Galeri Foto</h2>
+        <div class="row gallery-container">
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/ketua.png" data-caption="ketua">
+                        <img src="aset/ketua.png" class="img-fluid rounded shadow-sm" alt="Ketua">
+                        <div class="overlay">
+                            <p class="title">KETUA STT</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/wakil.png" data-caption="Wakil">
+                        <img src="aset/wakil.png" class="img-fluid rounded shadow-sm" alt="Wakil">
+                        <div class="overlay">
+                            <p class="title">Wakil STT</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/sekre1.png" data-caption="Sekretaris 1">
+                        <img src="aset/sekre1.png" class="img-fluid rounded shadow-sm" alt="Sekretaris 1">
+                        <div class="overlay">
+                            <p class="title">Sekretaris 1</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/sekre2.png" data-caption="Sekretaris 2">
+                        <img src="aset/sekre2.png" class="img-fluid rounded shadow-sm" alt="Sekretaris 2">
+                        <div class="overlay">
+                            <p class="title">Sekretaris 2</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/benda1.png" data-caption="Bendahara 1">
+                        <img src="aset/benda1.png" class="img-fluid rounded shadow-sm" alt="Bendahara 1">
+                        <div class="overlay">
+                            <p class="title">Bendahara 1</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/benda2.png" data-caption="Bendahara 2">
+                        <img src="aset/benda2.png" class="img-fluid rounded shadow-sm" alt="Bendahara 2">
+                        <div class="overlay">
+                            <p class="title">Bendahara 2</p>
+                            <p class="subtitle">2024-2025</p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="gallery-item">
+                    <a href="aset/rapat.jpg" data-caption="Rapat STT">
+                        <img src="aset/rapat.jpg" class="img-fluid rounded shadow-sm" alt="Rapat STT">
+                        <div class="overlay">
+                            <p class="title">Rapat anggota</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Follow US</h2>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/stcandramethuyowana" target="_blank">@stcandramethuyowana</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2025. <b>Mekar Sari.</b> All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap Bundle dengan Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script untuk menutup navbar saat menu diklik di mobile view -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbarToggler = document.querySelector(".navbar-toggler");
+            var navbarNav = document.querySelector("#navbarNav");
+            var navLinks = document.querySelectorAll(".nav-link");
+            
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function() {
+                    if (window.innerWidth <= 992) { // Hanya di mobile view
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+        
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("backsound");
+            let btnToggle = document.getElementById("toggleAudio");
+    
+            btnToggle.addEventListener("click", function () {
+                if (audio.paused) {
+                    audio.play();
+                    btnToggle.innerHTML = "🔊 Pause";
+                } else {
+                    audio.pause();
+                    btnToggle.innerHTML = "🔈 Play";
+                }
+            });
+        });
+    </script> 
+</body>
+</html>

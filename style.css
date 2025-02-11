@@ -1,0 +1,394 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    background: black; /* Mengubah warna navbar menjadi hitam penuh */
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav .menu ul li {
+    margin-left: 20px;
+}
+
+nav .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+nav .menu ul li a:hover {
+    background: rgba(166, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('aset/cmy.jpg') no-repeat center center/cover; /* Ganti dengan gambar yang sesuai */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.6); /* Overlay navy transparan */
+    z-index: 1;
+}
+
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+#home p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards 0.5s;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+#about {
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#about .kolom {
+    flex: 1;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+    
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: nowrap; /* Supaya foto sejajar ke samping */
+    overflow-x: auto; /* Bisa di-scroll ke samping */
+    gap: 130px; /* Jarak antar foto */
+    padding: 20px;
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar di IE dan Edge */
+}
+
+/* Hilangkan scrollbar di Webkit (Chrome, Safari) */
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 250px; /* Sesuaikan ukuran gambar */
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Gambar */
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek Zoom saat Hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay (Tulisan di dalam gambar) */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Latar belakang gelap transparan */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Teks di dalam gambar */
+.gallery-item .overlay p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Efek Muncul saat Hover */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Contact Section */
+#contact {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #f1c40f;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #f1c40f;
+}
+
+.contact-item a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Navbar untuk Mobile */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav .menu ul {
+        display: block;
+        width: 100%;
+    }
+
+    nav .menu ul li {
+        margin: 10px 0;
+    }
+
+    nav .menu ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+    }
+
+    .menu-toggle.active + .menu {
+        display: block;
+    }
+}
+
+/* Styling untuk Footer di Mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Navbar Animasi */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-toggle.active {
+        transform: rotate(90deg); /* Efek rotasi ikon */
+    }
+
+    nav .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    nav .menu.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav .menu ul {
+        display: block;
+        width: 100%;
+    }
+
+    nav .menu ul li {
+        margin: 10px 0;
+    }
+
+    nav .menu ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    nav .menu ul li a:hover {
+        background: rgba(166, 0, 0, 0.5);
+    }
+}
