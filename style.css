@@ -155,7 +155,7 @@ nav .menu ul li a:hover {
     display: flex;
     flex-wrap: nowrap; /* Supaya foto sejajar ke samping */
     overflow-x: auto; /* Bisa di-scroll ke samping */
-    gap: 10px; /* Jarak antar foto */
+    gap: 130px; /* Jarak antar foto */
     padding: 20px;
     scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
     -ms-overflow-style: none; /* Hilangkan scrollbar di IE dan Edge */
@@ -170,7 +170,7 @@ nav .menu ul li a:hover {
 .gallery-item {
     position: relative;
     flex: 0 0 auto;
-    width: 200px; /* Sesuaikan ukuran gambar */
+    width: 250px; /* Sesuaikan ukuran gambar */
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
