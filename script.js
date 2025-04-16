@@ -1,22 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("nav .menu");
-    const menuLinks = document.querySelectorAll("nav .menu ul li a");
-
-    if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-            menu.classList.toggle("active");
-            menuToggle.classList.toggle("active");
+// script-navbar.js
+document.addEventListener("DOMContentLoaded", function() {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navbarNav = document.querySelector("#navbarNav");
+    var navLinks = document.querySelectorAll(".nav-link");
+    
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            if (window.innerWidth <= 992) { 
+                navbarToggler.click();
+            }
         });
-
-        // Menutup menu saat salah satu link diklik (hanya untuk mobile)
-        menuLinks.forEach(link => {
-            link.addEventListener("click", function () {
-                if (window.innerWidth <= 768) { // Hanya berlaku di tampilan mobile
-                    menu.classList.remove("active");
-                    menuToggle.classList.remove("active");
-                }
-            });
-        });
-    }
+    });
 });
+
+// script-audio.js
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("backsound");
+    let btnToggle = document.getElementById("toggleAudio");
+
+    btnToggle.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            btnToggle.innerHTML = "🔊 Pause";
+        } else {
+            audio.pause();
+            btnToggle.innerHTML = "🔈 Play";
+        }
+    });
+});
+
+
